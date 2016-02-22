@@ -9,6 +9,7 @@ var gulp     = require('gulp'),
   usemin     = require('gulp-usemin'),
   minifyCss  = require('gulp-minify-css'),
   connect    = require('gulp-connect'),
+  deploy     = require('gulp-gh-pages'),
 
   files = {
     html: ['app/**/*.html'],
@@ -69,6 +70,14 @@ gulp.task('connect', function() {
     port: 1337,
     root: 'app'
   });
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 gulp.task('default', ['sass', 'jshint', 'connect', 'watch']);
