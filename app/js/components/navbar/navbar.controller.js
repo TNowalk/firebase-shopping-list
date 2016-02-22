@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ShoppingListApp')
-  .controller('NavbarCtrl', function ($scope, $location) {
+  .controller('NavbarCtrl', ['$scope', '$location', function ($scope, $location) {
     $scope.menu = [{
       'title': 'Home',
       'link': '/'
@@ -22,4 +22,4 @@ angular.module('ShoppingListApp')
     $scope.isActive = function(route) {
       return route === $location.path();
     };
-  });
+  }]);

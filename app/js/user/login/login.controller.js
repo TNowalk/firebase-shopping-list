@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ShoppingListApp')
-  .controller('LoginCtrl', function ($scope, $location, $firebaseAuth) {
+  .controller('LoginCtrl', ['$scope', '$location', '$firebaseAuth', function ($scope, $location, $firebaseAuth) {
     var ref = new Firebase('https://fb-shopping-list.firebaseio.com');
     var auth = $firebaseAuth(ref);
 
@@ -17,4 +17,4 @@ angular.module('ShoppingListApp')
         $scope.hasError = true;
       });
     };
-  });
+  }]);
