@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+
+  <title>Shopping List</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <ui-view></ui-view>
+
+  <!-- build:css css/main.css -->
+  <link rel="stylesheet" href="bower_components/bootswatch-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- endbuild -->
+</head>
+<body>
+
+  <!-- build:vendor js/vendor.js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="bower_components/firebase/firebase.js"></script>
+  <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+  <!-- endbuild -->
+  <!-- build:js js/app.js -->
+  <script src="js/app.module.js"></script>
+
+  <!-- Components -->
+  <script src="js/home/home.js"></script>
+  <script src="js/user/login/login.js"></script>
+
+  <!-- Factories -->
+
+  <!-- Directives -->
+
+  <!-- Controllers -->
+  <script src="js/components/navbar/navbar.controller.js"></script>
+  <script src="js/home/home.controller.js"></script>
+  <script src="js/user/login/login.controller.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
